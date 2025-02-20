@@ -3,9 +3,7 @@ import rospy
 from std_msgs.msg import String
 
 def publisher():
-    """
-    Node publisher untuk mengirimkan perintah pengguna ke topik /turtle_commands.
-    """
+    
     rospy.init_node('turtle_command_publisher', anonymous=True)
     pub = rospy.Publisher('/turtle_commands', String, queue_size=10)
 
